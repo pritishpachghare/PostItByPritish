@@ -25,7 +25,7 @@ form.addEventListener('submit', function (e) {
 
 
     fetch("https://parseapi.back4app.com/classes/post", {
-        method: "Post",
+        method: "post",
         body: JSON.stringify({
             title: title,
             text: text,
@@ -41,9 +41,34 @@ form.addEventListener('submit', function (e) {
         .then(function (response) {
             return response.json()
         })
+
         .then(function (data) {
             console.log(data)
         })
 
 
 })
+
+//     async function postData(url = "https://parseapi.back4app.com/classes/post", data = {}) {
+
+//         const response = await ("https://parseapi.back4app.com/classes/post", {
+//             method: "Post",
+//             body: JSON.stringify(),
+//             parameters: {
+//                 title: title,
+//                 text: text,
+//                 url: url,
+//                 categary: categary
+//             },
+//             headers: {
+//                 "X-Parse-Application-Id": "0bt1TmdJKWWwHl4NA0MrILRLBGLQes0dxjtA4zJe",
+//                 "X-Parse-REST-API-Key": "Carw2tDYITtqMIpf35RFo8fPoik9guCYHBJTX9UV",
+//                 "Content-Type": "application/json",
+//             }
+
+
+// })
+// return response.JSON()
+// }
+
+
